@@ -132,45 +132,57 @@
                 <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Contact Us</div>
                 <h1 class="mb-4">If You Have Any Query, Please Contact Us</h1>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="wow fadeIn" data-wow-delay="0.3s">
-                        <form action="https://formspree.io/f/xrbyelvn" method="POST">
-                          <label>
-                            Your Name:
-                            <input type="text" name="name" placeholder="Enter your full name" required>
-                          </label>
-
-                          <label>
-                            Your Address:
-                            <input type="text" name="address" placeholder="Enter your address" required>
-                          </label>
-
-                          <label>
-                            Your Email:
-                            <input type="email" name="email" placeholder="Enter your email" required>
-                          </label>
-
-                          <label>
-                            Service Needed:
-                            <select name="service" required>
-                              <option value="">Select a service</option>
-                              <option value="Robotic Automation">Robotic Automation</option>
-                              <option value="Machine Learning">Machine Learning</option>
-                              <option value="Predictive Analytics">Predictive Analytics</option>
-                              <option value="Data Science">Data Science</option>
-                              <option value="Robot Technology">Robot Technology</option>
-                              <option value="Other">Other</option>
-                            </select>
-                          </label>
-
-                          <label>
-                            Your Message:
-                            <textarea name="message" placeholder="Type your message here" required></textarea>
-                          </label>
-
-                          <button type="submit">Send</button>
-                        </form>
+            <div class="row g-5">
+                <div class="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
+                    <form action="https://formspree.io/f/xrbyelvn" method="POST">
+                      <div class="row g-3">
+                          <div class="col-md-6">
+                              <div class="form-floating">
+                                  <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                                  <label for="name">Your Name</label>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-floating">
+                                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                                  <label for="email">Your Email</label>
+                              </div>
+                          </div>
+                          <div class="col-12">
+                              <div class="form-floating">
+                                  <input type="text" class="form-control" name="address" placeholder="Your Address" required>
+                                  <label for="address">Your Address</label>
+                              </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="form-floating">
+                                <select class="form-select" name="service" required>
+                                  <option value="">Select a service</option>
+                                  <option value="Robotic Automation">Robotic Automation</option>
+                                  <option value="Machine Learning">Machine Learning</option>
+                                  <option value="Predictive Analytics">Predictive Analytics</option>
+                                  <option value="Data Science">Data Science</option>
+                                  <option value="Robot Technology">Robot Technology</option>
+                                  <option value="Other">Other</option>
+                                </select>
+                                <label for="service">Service Needed</label>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                              <div class="form-floating">
+                                  <textarea class="form-control" placeholder="Leave a message here" name="message" style="height: 150px" required></textarea>
+                                  <label for="message">Message</label>
+                              </div>
+                          </div>
+                          <div class="col-12">
+                              <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                          </div>
+                      </div>
+                    </form>
+                </div>
+                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="d-flex align-items-center justify-content-center" style="height: 100%;">
+                        <img class="img-fluid" src="img/about-img.jpg" alt="" style="animation: wave 2s linear infinite;">
                     </div>
                 </div>
             </div>
@@ -191,11 +203,11 @@
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <h5 class="text-white mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA — Los Angeles, California</p>
                     <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3"></i>trio_it@technologist.com</p>
-                    <p><i class="fa fa-envelope me-3"></i>trio.it@jayprasad.com.np</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@jayprasad.com.np</p>
+                    <p><i class="fa fa-envelope me-3"></i><a href="mailto:trio_it@technologist.com">trio_it@technologist.com</a></p>
+                    <p><i class="fa fa-envelope me-3"></i><a href="mailto:trio.it@jayprasad.com.np">trio.it@jayprasad.com.np</a></p>
+                    <p><i class="fa fa-envelope me-3"></i><a href="mailto:info@jayprasad.com.np">info@jayprasad.com.np</a></p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
