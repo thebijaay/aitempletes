@@ -3,13 +3,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>AI.Tech - Artificial Intelligence HTML Template</title>
+    <title>AI.Tech - 404 Page Not Found</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="404 Error, Page Not Found, AI.Tech Error, Missing Page, Site Error" name="keywords">
+    <meta content="Oops! The page you're looking for could not be found. Please return to the AI.Tech homepage or use the search bar to find what you need." name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="512x512" href="img/icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,12 +60,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="project.html" class="nav-item nav-link">Projects</a>
+                        <a href="index.html" class="nav-item nav-link"><i class="fa fa-home me-2"></i>Home</a>
+                        <a href="about.html" class="nav-item nav-link"><i class="fa fa-info-circle me-2"></i>About</a>
+                        <a href="service.html" class="nav-item nav-link"><i class="fa fa-cogs me-2"></i>Services</a>
+                        <a href="project.html" class="nav-item nav-link"><i class="fa fa-project-diagram me-2"></i>Projects</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"><i class="fa fa-file-alt me-2"></i>Pages</a>
                             <div class="dropdown-menu bg-light mt-2">
                                 <a href="feature.html" class="dropdown-item">Features</a>
                                 <a href="team.html" class="dropdown-item">Our Team</a>
@@ -70,7 +74,7 @@
                                 <a href="404.html" class="dropdown-item active">404 Page</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="contact.html" class="nav-item nav-link"><i class="fa fa-envelope me-2"></i>Contact</a>
                     </div>
                     <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
                         data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
@@ -89,14 +93,14 @@
                     <h1 class="display-4 text-white mb-4 animated slideInRight">404 Error</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
                             <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">404 Error</li>
                         </ol>
                     </nav>
                 </div>
                 <div class="col-lg-6 align-self-end text-center text-lg-end">
-                    <img class="img-fluid" src="img/hero-img.png" alt="" style="max-height: 300px;">
+                    <img class="img-fluid hero-robot-animation" src="img/hero-img.png" alt="Futuristic robot hero image" style="max-height: 300px;">
                 </div>
             </div>
         </div>
@@ -133,13 +137,37 @@
                     <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
                     <h1 class="display-1">404</h1>
                     <h1 class="mb-4">Page Not Found</h1>
-                    <p class="mb-4">We’re sorry, the page you have looked for does not exist in our website! Maybe go to our home page or try to use a search?</p>
-                    <a class="btn btn-primary rounded-pill py-3 px-5" href="">Go Back To Home</a>
+                    <p class="mb-4">We’re sorry, the page you have looked for does not exist on our website. You can go back to our home page or try to use the search bar.</p>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="index.html">Go Back To Home</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- 404 End -->
+
+
+    <!-- Newsletter Start -->
+    <div class="container-fluid bg-primary newsletter py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-md-5 ps-lg-0 pt-5 pt-md-0 text-start wow fadeIn" data-wow-delay="0.3s">
+                    <img class="img-fluid" src="img/newsletter.png" alt="Newsletter illustration">
+                </div>
+                <div class="col-md-7 py-5 newsletter-text wow fadeIn" data-wow-delay="0.5s">
+                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Newsletter</div>
+                    <h1 class="text-white mb-4">Subscribe to our newsletter</h1>
+                    <div class="position-relative w-100 mt-3 mb-2">
+                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                            placeholder="Enter Your Email" style="height: 48px;">
+                        <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                class="fa fa-paper-plane text-primary fs-4"></i></button>
+                    </div>
+                    <small class="text-white-50">Stay up-to-date with the latest trends in AI and robotics.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter End -->
 
 
     <!-- Footer Start -->
@@ -150,13 +178,15 @@
                     <a href="index.html" class="d-inline-block mb-3">
                         <h1 class="text-white">AI<span class="text-primary">.</span>Tech</h1>
                     </a>
-                    <p class="mb-0">AI.Tech is a leading provider of AI solutions for businesses. We are committed to helping our clients harness the power of AI to drive growth, innovation, and success.</p>
+                    <p class="mb-0">We are a leading provider of AI-powered solutions, helping businesses of all sizes to leverage the power of artificial intelligence to improve their operations and drive growth.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <h5 class="text-white mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA — Los Angeles, California</p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Los Angeles, California, USA</p>
                     <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3"></i><a href="mailto:info@jayprasad.com.np">info@jayprasad.com.np</a></p>
+                    <p><i class="fa fa-envelope me-3"></i>info@jayprasad.com.np</p>
+                    <p><i class="fa fa-envelope me-3"></i>trio.it@jayprasad.com.np</p>
+                    <p><i class="fa fa-envelope me-3"></i>trio_it@technologist.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -166,20 +196,20 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <h5 class="text-white mb-4">Popular Link</h5>
+                    <h5 class="text-white mb-4">Quick Links</h5>
                     <a class="btn btn-link" href="about.html">About Us</a>
                     <a class="btn btn-link" href="contact.html">Contact Us</a>
-                    <a class="btn btn-link" href="privacy.html">Privacy Policy</a>
-                    <a class="btn btn-link" href="terms.html">Terms & Condition</a>
+                    <a class="btn btn-link" href="privacy-policy.html">Privacy Policy</a>
+                    <a class="btn btn-link" href="terms-and-conditions.html">Terms & Condition</a>
                     <a class="btn btn-link" href="career.html">Career</a>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                     <h5 class="text-white mb-4">Our Services</h5>
-                    <a class="btn btn-link" href="robotic-automation.html">Robotic Automation</a>
-                    <a class="btn btn-link" href="machine-learning.html">Machine learning</a>
-                    <a class="btn btn-link" href="predictive-analytics.html">Predictive Analysis</a>
-                    <a class="btn btn-link" href="data-science.html">Data Science</a>
-                    <a class="btn btn-link" href="robot-technology.html">Robot Technology</a>
+                    <a class="btn btn-link" href="service.html">Robotic Automation</a>
+                    <a class="btn btn-link" href="service.html">Machine learning</a>
+                    <a class="btn btn-link" href="service.html">Predictive Analysis</a>
+                    <a class="btn btn-link" href="service.html">Data Science</a>
+                    <a class="btn btn-link" href="service.html">Robot Technology</a>
                 </div>
             </div>
         </div>
@@ -187,7 +217,9 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; Bijay. All Rights Reserved. Designed and Developed by Bijay. Distributed by Bijay.
+                        &copy; <a class="border-bottom" href="#">Bijay</a>, All Right Reserved.
+                        Designed By <a class="border-bottom" href="https://bijaynp.com">Bijay</a>
+                        Distributed By <a class="border-bottom" href="https://bijaynp.com">Bijay</a>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
