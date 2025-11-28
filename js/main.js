@@ -6,8 +6,23 @@
         setTimeout(function () {
             if ($('#spinner').length > 0) {
                 $('#spinner').removeClass('show');
+
+                // Show welcome screen
+                var welcomeScreen = $('#welcome-screen');
+                welcomeScreen.css({
+                    'opacity': '1',
+                    'visibility': 'visible'
+                });
+
+                // Hide welcome screen after 3 seconds
+                setTimeout(function() {
+                    welcomeScreen.css({
+                        'opacity': '0',
+                        'visibility': 'hidden'
+                    });
+                }, 3000);
             }
-        }, 1);
+        }, 2000); // Changed timeout to 2 seconds
     };
     spinner();
     
@@ -63,3 +78,38 @@
     
 })(jQuery);
 
+
+    // Robotic Clock
+    function updateClock() {
+        var now = new Date();
+        var day = now.getDate();
+        var month = now.getMonth() + 1;
+        var year = now.getFullYear();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        var timeString = day + '/' + month + '/' + year + ' ' + hours + ':' + minutes + ':' + seconds;
+        $('#robotic-clock').text(timeString);
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // Robot Eye Tracking
+    $(document).on('mousemove', function(e){
+        var eye = $(".robot-eye");
+        var x = (eye.offset().left) + (eye.width() / 2);
+        var y = (eye.offset().top) + (eye.height() / 2);
+        var rad = Math.atan2(e.pageX - x, e.pageY - y);
+        var rot = (rad * (180 / Math.PI) * -1) + 180;
+        eye.css({
+            '-webkit-transform': 'rotate(' + rot + 'deg)',
+            '-moz-transform': 'rotate(' + rot + 'deg)',
+            '-ms-transform': 'rotate(' + rot + 'deg)',
+            'transform': 'rotate(' + rot + 'deg)'
+        });
+    });
+
+    // Chat Widget
+    $('.chat-icon').on('click', function(){
+        $('.chat-window').slideToggle();
+    });

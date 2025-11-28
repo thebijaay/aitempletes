@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>AI.Tech - Artificial Intelligence HTML Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="robotics, AI, futuristic UI, 3D interfaces" name="keywords">
+    <meta content="AI.Tech is a leading provider of AI solutions for businesses. We are committed to helping our clients harness the power of AI to drive growth, innovation, and success." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -35,12 +35,22 @@
 <body>
     <!-- Spinner Start -->
     <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
+        class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="robot--container">
+            <i class="fas fa-robot fa-spin fa-5x text-white"></i>
+            <p class="mt-3 text-white">Initializing System...</p>
         </div>
     </div>
     <!-- Spinner End -->
+
+    <!-- Welcome Screen Start -->
+    <div id="welcome-screen" class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center" style="background-color: rgba(0, 0, 0, 0.9); z-index: 9998; opacity: 0; visibility: hidden; transition: opacity 1s ease-out;">
+        <div class="text-center">
+            <i class="fas fa-robot fa-4x text-white mb-3"></i>
+            <h1 class="text-white">Welcome to our website</h1>
+        </div>
+    </div>
+    <!-- Welcome Screen End -->
 
 
     <!-- Navbar Start -->
@@ -56,21 +66,21 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="project.html" class="nav-item nav-link">Projects</a>
+                        <a href="index.html" class="nav-item nav-link active"><i class="fa fa-home me-2"></i>Home</a>
+                        <a href="about.html" class="nav-item nav-link"><i class="fa fa-info-circle me-2"></i>About</a>
+                        <a href="service.html" class="nav-item nav-link"><i class="fa fa-cogs me-2"></i>Services</a>
+                        <a href="project.html" class="nav-item nav-link"><i class="fa fa-project-diagram me-2"></i>Projects</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-file-alt me-2"></i>Pages</a>
                             <div class="dropdown-menu bg-light mt-2">
-                                <a href="feature.html" class="dropdown-item">Features</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="faq.html" class="dropdown-item">FAQs</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
+                                <a href="feature.html" class="dropdown-item"><i class="fa fa-star me-2"></i>Features</a>
+                                <a href="team.html" class="dropdown-item"><i class="fa fa-users me-2"></i>Our Team</a>
+                                <a href="faq.html" class="dropdown-item"><i class="fa fa-question-circle me-2"></i>FAQs</a>
+                                <a href="testimonial.html" class="dropdown-item"><i class="fa fa-comment-dots me-2"></i>Testimonial</a>
+                                <a href="404.html" class="dropdown-item"><i class="fa fa-exclamation-triangle me-2"></i>404 Page</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="contact.html" class="nav-item nav-link"><i class="fa fa-envelope me-2"></i>Contact</a>
                     </div>
                     <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
                         data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
@@ -93,7 +103,17 @@
                     <a href="" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
                 </div>
                 <div class="col-lg-6 align-self-end text-center text-lg-end">
-                    <img class="img-fluid" src="img/hero-img.png" alt="">
+                    <div class="robot-container">
+                        <div class="robot">
+                            <div class="robot-eye"></div>
+                            <div class="robot-eye"></div>
+                        </div>
+                        <div class="hologram">
+                            <p>Hello! How can I help you today?</p>
+                            <p>I’m your virtual assistant. Select a service or ask anything!</p>
+                        </div>
+                    </div>
+                    <div id="robotic-clock" class="robotic-clock"></div>
                 </div>
             </div>
         </div>
@@ -128,7 +148,7 @@
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="about-img">
-                        <img class="img-fluid" src="img/about-img.jpg">
+                        <div class="robot-placeholder"></div>
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
@@ -239,19 +259,19 @@
                         <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
                             <i class="fa fa-check"></i>
                         </div>
-                        <span>Diam dolor diam ipsum et tempor sit</span>
+                        <span>Decade of Experience in AI</span>
                     </div>
                     <div class="d-flex align-items-center text-white mb-3">
                         <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
                             <i class="fa fa-check"></i>
                         </div>
-                        <span>Diam dolor diam ipsum et tempor sit</span>
+                        <span>Proven Track Record</span>
                     </div>
                     <div class="d-flex align-items-center text-white mb-3">
                         <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
                             <i class="fa fa-check"></i>
                         </div>
-                        <span>Diam dolor diam ipsum et tempor sit</span>
+                        <span>Dedicated Team of Experts</span>
                     </div>
                     <div class="row g-4 pt-3">
                         <div class="col-sm-6">
@@ -275,7 +295,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 align-self-end text-center text-md-end wow fadeIn" data-wow-delay="0.5s">
-                    <img class="img-fluid" src="img/feature.png" alt="">
+                    <div class="robot-placeholder"></div>
                 </div>
             </div>
         </div>
@@ -293,7 +313,7 @@
             <div class="row g-4">
                 <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
                     <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/project-1.jpg" alt="">
+                        <div class="robot-placeholder"></div>
                         <a class="case-overlay text-decoration-none" href="">
                             <small>Robotic Automation</small>
                             <h5 class="lh-base text-white mb-3">Our robotic automation solutions have helped businesses streamline operations, increase productivity, and reduce costs.
@@ -304,7 +324,7 @@
                 </div>
                 <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
                     <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/project-2.jpg" alt="">
+                        <div class="robot-placeholder"></div>
                         <a class="case-overlay text-decoration-none" href="">
                             <small>Machine learning</small>
                             <h5 class="lh-base text-white mb-3">Our machine learning models have empowered businesses to make data-driven decisions and gain a competitive edge.
@@ -315,7 +335,7 @@
                 </div>
                 <div class="col-lg-4 wow fadeIn" data-wow-delay="0.7s">
                     <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/project-3.jpg" alt="">
+                        <div class="robot-placeholder"></div>
                         <a class="case-overlay text-decoration-none" href="">
                             <small>Predictive Analysis</small>
                             <h5 class="lh-base text-white mb-3">Our predictive analysis solutions have enabled businesses to forecast trends, identify opportunities, and mitigate risks.
@@ -472,7 +492,7 @@
                     <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Our Team</div>
                     <h1 class="mb-4">Meet Our Experienced Team Members</h1>
                     <p class="mb-4">Our team of experienced professionals is dedicated to providing you with the best AI solutions to meet your business needs. We are passionate about what we do and are committed to helping you succeed.</p>
-                    <a class="btn btn-primary rounded-pill px-4" href="">Read More</a>
+                    <a class="btn btn-primary rounded-pill px-4" href="team.html">Meet Our Team</a>
                 </div>
                 <div class="col-lg-7">
                     <div class="row g-4">
@@ -480,7 +500,7 @@
                             <div class="row g-4">
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
                                     <div class="team-item bg-white text-center rounded p-4 pt-0">
-                                        <img class="img-fluid rounded-circle p-4" src="img/team-1.jpg" alt="">
+                                        <img class="img-fluid rounded-circle p-4" src="img/robot-placeholder.png" alt="">
                                         <h5 class="mb-0">Boris Johnson</h5>
                                         <small>Founder & CEO</small>
                                         <div class="d-flex justify-content-center mt-3">
@@ -497,7 +517,7 @@
                                 </div>
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
                                     <div class="team-item bg-white text-center rounded p-4 pt-0">
-                                        <img class="img-fluid rounded-circle p-4" src="img/team-2.jpg" alt="">
+                                        <img class="img-fluid rounded-circle p-4" src="img/robot-placeholder.png" alt="">
                                         <h5 class="mb-0">Adam Crew</h5>
                                         <small>Executive Manager</small>
                                         <div class="d-flex justify-content-center mt-3">
@@ -518,7 +538,7 @@
                             <div class="row g-4">
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
                                     <div class="team-item bg-white text-center rounded p-4 pt-0">
-                                        <img class="img-fluid rounded-circle p-4" src="img/team-3.jpg" alt="">
+                                        <img class="img-fluid rounded-circle p-4" src="img/robot-placeholder.png" alt="">
                                         <h5 class="mb-0">Kate Winslet</h5>
                                         <small>Co Founder</small>
                                         <div class="d-flex justify-content-center mt-3">
@@ -535,7 +555,7 @@
                                 </div>
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.7s">
                                     <div class="team-item bg-white text-center rounded p-4 pt-0">
-                                        <img class="img-fluid rounded-circle p-4" src="img/team-4.jpg" alt="">
+                                        <img class="img-fluid rounded-circle p-4" src="img/robot-placeholder.png" alt="">
                                         <h5 class="mb-0">Cody Gardner</h5>
                                         <small>Project Manager</small>
                                         <div class="d-flex justify-content-center mt-3">
@@ -621,7 +641,7 @@
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-md-5 ps-lg-0 pt-5 pt-md-0 text-start wow fadeIn" data-wow-delay="0.3s">
-                    <img class="img-fluid" src="img/newsletter.png" alt="">
+                    <div class="robot-placeholder"></div>
                 </div>
                 <div class="col-md-7 py-5 newsletter-text wow fadeIn" data-wow-delay="0.5s">
                     <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Newsletter</div>
@@ -632,7 +652,7 @@
                         <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
                                 class="fa fa-paper-plane text-primary fs-4"></i></button>
                     </div>
-                    <small class="text-white-50">Diam sed sed dolor stet amet eirmod</small>
+                    <small class="text-white-50">Subscribe to our newsletter to stay updated on the latest AI trends and technologies.</small>
                 </div>
             </div>
         </div>
@@ -652,9 +672,13 @@
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <h5 class="text-white mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Los Angeles, California, USA</p>
                     <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@jayprasad.com.np</p>
+                    <p><i class="fa fa-envelope me-3"></i>trio.it@jayprasad.com.np</p>
+                    <p><i class="fa fa-envelope me-3"></i>trio_it@technologist.com</p>
+                    <p><i class="fa fa-envelope me-3"></i>ausinquiry@outlook.com</p>
+                    <p><i class="fa fa-envelope me-3"></i>trio_it@outlook.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -664,12 +688,11 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <h5 class="text-white mb-4">Popular Link</h5>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
-                    <a class="btn btn-link" href="privacy.html">Privacy Policy</a>
-                    <a class="btn btn-link" href="terms.html">Terms & Condition</a>
-                    <a class="btn btn-link" href="career.html">Career</a>
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="visitor-login.html">Visitor Login</a>
+                    <a class="btn btn-link" href="visitor-register.html">Create Account</a>
+                    <a class="btn btn-link" href="visitor-forgot-password.html">Forgot Password</a>
+                    <a class="btn btn-link" href="admin-login.html">Admin Login</a>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                     <h5 class="text-white mb-4">Our Services</h5>
@@ -704,6 +727,28 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- Chat Widget Start -->
+    <div class="chat-widget">
+        <div class="chat-icon">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="chat-window">
+            <div class="chat-header">
+                <i class="fas fa-robot me-2"></i> Robo-Assistant
+            </div>
+            <div class="chat-body">
+                <div class="message received">
+                    Hi! I’m Robo-Assistant. Ask me anything — I’m here to help.
+                </div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" placeholder="Type your message...">
+                <button><i class="fa fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- Chat Widget End -->
 
 
     <!-- JavaScript Libraries -->
