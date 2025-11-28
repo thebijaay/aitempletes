@@ -5,11 +5,15 @@
     <meta charset="utf-8">
     <title>AI.Tech - Artificial Intelligence HTML Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="AI, Artificial Intelligence, Robotics, Futuristic Technology, Machine Learning, Data Science" name="keywords">
+    <meta content="AI.Tech is a leading provider of AI and robotics solutions, specializing in machine learning, data science, and futuristic technology." name="description">
     <meta content="robotics, AI, futuristic UI, 3D interfaces" name="keywords">
     <meta content="AI.Tech is a leading provider of AI solutions for businesses. We are committed to helping our clients harness the power of AI to drive growth, innovation, and success." name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,6 +37,14 @@
 </head>
 
 <body>
+    <!-- Welcome Screen Start -->
+    <div id="welcome-screen">
+        <div class="robot-container">
+            <img src="img/robot-wave.gif" alt="Waving Robot" class="robot-animation">
+            <h1 class="welcome-text">Welcome to our website</h1>
+        </div>
+    </div>
+    <!-- Welcome Screen End -->
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -43,6 +55,15 @@
     </div>
     <!-- Spinner End -->
 
+    <!-- Loading Screen Start -->
+    <div id="loading-screen">
+        <div class="robot-face">
+            <div class="eye"></div>
+            <div class="eye"></div>
+        </div>
+        <p>Initializing System...</p>
+    </div>
+    <!-- Loading Screen End -->
     <!-- Welcome Screen Start -->
     <div id="welcome-screen" class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center" style="background-color: rgba(0, 0, 0, 0.9); z-index: 9998; opacity: 0; visibility: hidden; transition: opacity 1s ease-out;">
         <div class="text-center">
@@ -76,6 +97,7 @@
                                 <a href="feature.html" class="dropdown-item"><i class="fa fa-star me-2"></i>Features</a>
                                 <a href="team.html" class="dropdown-item"><i class="fa fa-users me-2"></i>Our Team</a>
                                 <a href="faq.html" class="dropdown-item"><i class="fa fa-question-circle me-2"></i>FAQs</a>
+                                <a href="testimonial.html" class="dropdown-item"><i class="fa fa-comment me-2"></i>Testimonial</a>
                                 <a href="testimonial.html" class="dropdown-item"><i class="fa fa-comment-dots me-2"></i>Testimonial</a>
                                 <a href="404.html" class="dropdown-item"><i class="fa fa-exclamation-triangle me-2"></i>404 Page</a>
                             </div>
@@ -96,6 +118,7 @@
         <div class="container pt-5">
             <div class="row g-5 pt-5">
                 <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                    <div id="robotic-clock"></div>
                     <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">AI.Tech</div>
                     <h1 class="display-4 text-white mb-4 animated slideInRight">Artificial Intelligence for Your Business</h1>
                     <p class="text-white mb-4 animated slideInRight">We deliver innovative AI solutions that drive business growth. Our expertise in machine learning, data science, and robotic automation enables us to create intelligent systems that optimize processes and deliver exceptional results.</p>
@@ -103,6 +126,8 @@
                     <a href="" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
                 </div>
                 <div class="col-lg-6 align-self-end text-center text-lg-end">
+                    <div id="robot-eye-container"></div>
+                    <img class="img-fluid" src="img/hero-img.png" alt="A futuristic robot head with glowing blue eyes, representing AI technology.">
                     <div class="robot-container">
                         <div class="robot">
                             <div class="robot-eye"></div>
@@ -148,11 +173,16 @@
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="about-img">
+                        <img class="img-fluid" src="img/robot-about.jpg" alt="A robot pointing at a holographic interface, symbolizing smart business solutions.">
+                        <div class="hologram-effect"></div>
+                        <div class="robot-graphic">
+                            <img src="img/robot-scanning.gif" alt="An animated robot scanning a digital interface, representing data analysis.">
+                        </div>
                         <div class="robot-placeholder"></div>
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">About Us</div>
+                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3 robot-point">About Us</div>
                     <h1 class="mb-4">We Make Your Business Smarter with Artificial Intelligence</h1>
                     <p class="mb-4">Our mission is to empower businesses with cutting-edge AI-driven solutions. We are committed to innovation, integrity, and client success, leveraging our expertise to deliver transformative results.</p>
                     <div class="row g-3">
@@ -166,7 +196,7 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center mt-4">
-                        <a class="btn btn-primary rounded-pill px-4 me-3" href="">Read More</a>
+                        <a class="btn btn-primary rounded-pill px-4 me-3 robot-highlight" href="">Read More</a>
                         <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-instagram"></i></a>
@@ -184,7 +214,7 @@
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Our Services</div>
+                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3 robot-point">Our Services</div>
                     <h1 class="mb-4">Our Excellent AI Solutions for Your Business</h1>
                     <p class="mb-4">Our AI solutions are designed to meet the unique needs of your business. We offer a range of services, from robotic automation to predictive analytics, to help you achieve your goals.</p>
                     <a class="btn btn-primary rounded-pill px-4" href="">Read More</a>
@@ -259,18 +289,21 @@
                         <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
                             <i class="fa fa-check"></i>
                         </div>
+                        <span>Customized AI Solutions</span>
                         <span>Decade of Experience in AI</span>
                     </div>
                     <div class="d-flex align-items-center text-white mb-3">
                         <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
                             <i class="fa fa-check"></i>
                         </div>
+                        <span>Expert Team of Data Scientists</span>
                         <span>Proven Track Record</span>
                     </div>
                     <div class="d-flex align-items-center text-white mb-3">
                         <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
                             <i class="fa fa-check"></i>
                         </div>
+                        <span>24/7 Customer Support</span>
                         <span>Dedicated Team of Experts</span>
                     </div>
                     <div class="row g-4 pt-3">
@@ -652,6 +685,7 @@
                         <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
                                 class="fa fa-paper-plane text-primary fs-4"></i></button>
                     </div>
+                    <small class="text-white-50">Subscribe to our newsletter to stay updated on the latest trends in AI and robotics.</small>
                     <small class="text-white-50">Subscribe to our newsletter to stay updated on the latest AI trends and technologies.</small>
                 </div>
             </div>
@@ -674,6 +708,9 @@
                     <h5 class="text-white mb-4">Get In Touch</h5>
                     <p><i class="fa fa-map-marker-alt me-3"></i>Los Angeles, California, USA</p>
                     <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p><i class="fa fa-envelope me-3"></i>trio_it@technologist.com</p>
+                    <p><i class="fa fa-envelope me-3"></i>trio.it@jayprasad.com.np</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@jayprasad.com.np</p>
                     <p><i class="fa fa-envelope me-3"></i>info@jayprasad.com.np</p>
                     <p><i class="fa fa-envelope me-3"></i>trio.it@jayprasad.com.np</p>
                     <p><i class="fa fa-envelope me-3"></i>trio_it@technologist.com</p>
@@ -689,19 +726,19 @@
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
                     <h5 class="text-white mb-4">Popular Link</h5>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
-                    <a class="btn btn-link" href="privacy.html">Privacy Policy</a>
-                    <a class="btn btn-link" href="terms.html">Terms & Condition</a>
-                    <a class="btn btn-link" href="career.html">Career</a>
+                    <a class="btn btn-link quick-link" href="about.html">About Us</a>
+                    <a class="btn btn-link quick-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link quick-link" href="privacy.html">Privacy Policy</a>
+                    <a class="btn btn-link quick-link" href="terms.html">Terms & Condition</a>
+                    <a class="btn btn-link quick-link" href="career.html">Career</a>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                     <h5 class="text-white mb-4">Our Services</h5>
-                    <a class="btn btn-link" href="robotic-automation.html">Robotic Automation</a>
-                    <a class="btn btn-link" href="machine-learning.html">Machine learning</a>
-                    <a class="btn btn-link" href="predictive-analytics.html">Predictive Analysis</a>
-                    <a class="btn btn-link" href="data-science.html">Data Science</a>
-                    <a class="btn btn-link" href="robot-technology.html">Robot Technology</a>
+                    <a class="btn btn-link quick-link" href="robotic-automation.html">Robotic Automation</a>
+                    <a class="btn btn-link quick-link" href="machine-learning.html">Machine learning</a>
+                    <a class="btn btn-link quick-link" href="predictive-analytics.html">Predictive Analysis</a>
+                    <a class="btn btn-link quick-link" href="data-science.html">Data Science</a>
+                    <a class="btn btn-link quick-link" href="robot-technology.html">Robot Technology</a>
                 </div>
             </div>
         </div>
