@@ -111,3 +111,118 @@
     setInterval(updateClock, 1000);
 
 })(jQuery);
+(function ($) {
+    "use strict";
+
+    // Spinner
+    var spinner = function () {
+        setTimeout(function () {
+            if ($('#spinner').length > 0) {
+                $('#spinner').removeClass('show');
+
+                // Show welcome screen
+                var welcomeScreen = $('#welcome-screen');
+                welcomeScreen.css({
+                    'opacity': '1',
+                    'visibility': 'visible'
+                });
+
+                // Hide welcome screen after 3 seconds
+                setTimeout(function() {
+                    welcomeScreen.css({
+                        'opacity': '0',
+                        'visibility': 'hidden'
+                    });
+                }, 3000);
+            }
+        }, 2000); // Changed timeout to 2 seconds
+    };
+    spinner();
+    
+    
+    // Initiate the wowjs
+    new WOW().init();
+
+
+    // Sticky Navbar
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            $('.sticky-top').addClass('bg-primary shadow-sm').css('top', '0px');
+        } else {
+            $('.sticky-top').removeClass('bg-primary shadow-sm').css('top', '-150px');
+        }
+    });
+
+
+    // Facts counter
+    $('[data-toggle="counter-up"]').counterUp({
+        delay: 10,
+        time: 2000
+    });
+    
+    
+    // Back to top button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
+    });
+    $('.back-to-top').click(function () {
+        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        return false;
+    });
+
+
+    // Testimonials carousel
+    $(".testimonial-carousel").owlCarousel({
+        items: 1,
+        autoplay: true,
+        smartSpeed: 1000,
+        dots: true,
+        loop: true,
+        nav: true,
+        navText : [
+            '<i class="bi bi-chevron-left"></i>',
+            '<i class="bi bi-chevron-right"></i>'
+        ]
+    });
+    
+})(jQuery);
+
+
+    // Robotic Clock
+    function updateClock() {
+        var now = new Date();
+        var day = now.getDate();
+        var month = now.getMonth() + 1;
+        var year = now.getFullYear();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        var timeString = day + '/' + month + '/' + year + ' ' + hours + ':' + minutes + ':' + seconds;
+        $('#robotic-clock').text(timeString);
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // Robot Eye Tracking
+    $(document).on('mousemove', function(e){
+        var eye = $(".robot-eye");
+        var x = (eye.offset().left) + (eye.width() / 2);
+        var y = (eye.offset().top) + (eye.height() / 2);
+        var rad = Math.atan2(e.pageX - x, e.pageY - y);
+        var rot = (rad * (180 / Math.PI) * -1) + 180;
+        eye.css({
+            '-webkit-transform': 'rotate(' + rot + 'deg)',
+            '-moz-transform': 'rotate(' + rot + 'deg)',
+            '-ms-transform': 'rotate(' + rot + 'deg)',
+            'transform': 'rotate(' + rot + 'deg)'
+        });
+    });
+
+    // Chat Widget
+    $('.chat-icon').on('click', function(){
+        $('.chat-window').slideToggle();
+    });

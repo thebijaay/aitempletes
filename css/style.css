@@ -1,9 +1,11 @@
 /********** Template CSS **********/
 :root {
-    --primary: #1363C6;
-    --secondary: #15ACE1;
-    --light: #F4F7FE;
-    --dark: #14183E;
+    --primary: #0D6EFD;
+    --secondary: #6C757D;
+    --light: #F8F9FA;
+    --dark: #212529;
+    --neon-blue: #00BFFF;
+    --metallic: #B0C4DE;
 }
 
 
@@ -13,6 +15,19 @@
     visibility: hidden;
     transition: opacity .5s ease-out, visibility 0s linear .5s;
     z-index: 99999;
+}
+
+.fa-spin {
+    animation: fa-spin 2s infinite linear;
+}
+
+@keyframes fa-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
 }
 
 #spinner.show {
@@ -95,6 +110,33 @@ h6,
     padding: 0;
     color: rgba(255, 255, 255, .7);
     outline: none;
+    position: relative;
+    transition: .5s;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--neon-blue);
+    background-color: var(--metallic);
+    border-radius: 5px;
+}
+
+.navbar .navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--neon-blue);
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar .navbar-nav .nav-link:hover::before {
+    width: 100%;
+}
+
+.sticky-top.shadow-sm {
+    box-shadow: 0 0 10px var(--neon-blue) !important;
 }
 
 .navbar .navbar-nav .nav-link:hover,
@@ -171,12 +213,83 @@ h6,
 /*** Hero Header ***/
 .hero-header {
     margin-top: -75px;
-    background: url(../img/bg-hero.png) center center no-repeat;
+    background: linear-gradient(rgba(20, 24, 62, .7), rgba(20, 24, 62, .7)), url(../img/bg-hero.png) center center no-repeat;
     background-size: cover;
+}
+
+.robot-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: var(--metallic);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.robot-placeholder::before {
+    content: "\f135";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 10rem;
+    color: var(--neon-blue);
 }
 
 .hero-header .breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
+}
+
+.robot-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.robot {
+    width: 100%;
+    height: 100%;
+    background-color: var(--metallic);
+    border-radius: 50%;
+    position: relative;
+}
+
+.robot-eye {
+    position: absolute;
+    top: 30%;
+    width: 40px;
+    height: 40px;
+    background-color: var(--neon-blue);
+    border-radius: 50%;
+    border: 2px solid var(--dark);
+}
+
+.robot-eye:first-child {
+    left: 25%;
+}
+
+.robot-eye:last-child {
+    right: 25%;
+}
+
+.hologram {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 191, 255, 0.2);
+    border: 1px solid var(--neon-blue);
+    padding: 10px;
+    color: var(--neon-blue);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--neon-blue);
+}
+
+.robotic-clock {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: var(--neon-blue);
+    text-shadow: 0 0 5px var(--neon-blue);
 }
 
 
@@ -535,13 +648,22 @@ h6,
 
 .footer .btn.btn-link:hover {
     letter-spacing: 1px;
-    box-shadow: none;
+    box-shadow: 0 0 10px var(--neon-blue);
+    color: var(--neon-blue);
+}
+
+.footer .btn.btn-link::before {
+    content: "\f25a";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
 }
 
 .footer .copyright {
     padding: 25px 0;
     font-size: 14px;
-    border-top: 1px solid rgba(256, 256, 256, .1);
+    border-top: 1px solid var(--neon-blue);
+    box-shadow: 0 -1px 10px var(--neon-blue);
 }
 
 .footer .copyright a {
@@ -805,5 +927,101 @@ h6,
     }
     50% {
         transform: translateY(-20px);
+/*** Chat Widget ***/
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chat-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+.chat-window {
+    display: none;
+    width: 300px;
+    height: 400px;
+    background-color: var(--dark);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    flex-direction: column;
+    box-shadow: 0 0 10px var(--neon-blue);
+}
+
+.chat-header {
+    background-color: var(--primary);
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chat-body {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.received {
+    background-color: var(--metallic);
+    color: var(--dark);
+}
+
+.sent {
+    background-color: var(--primary);
+    color: white;
+    align-self: flex-end;
+}
+
+.chat-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid var(--neon-blue);
+}
+
+.chat-footer input {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--light);
+}
+
+.chat-footer button {
+    border: none;
+    background: none;
+    color: var(--neon-blue);
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 191, 255, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(0, 191, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 191, 255, 0);
     }
 }
